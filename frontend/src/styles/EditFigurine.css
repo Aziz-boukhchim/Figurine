@@ -1,0 +1,121 @@
+/* Scope everything to .edit-figurine-page so it doesn't leak */
+.edit-figurine-page {
+  min-height: 100vh;
+  padding: 30px;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0d0d0f 0%, #1a1a2e 100%);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.admin-page .navbar {
+  display: none !important;
+}
+
+
+/* Form container */
+.edit-figurine-container {
+  background: rgba(20, 20, 35, 0.9);
+  border: 1px solid rgba(255, 0, 102, 0.3);
+  padding: 30px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 25px rgba(255, 0, 102, 0.3);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Title */
+.edit-figurine-container h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ff0066;
+  text-shadow: 0 0 5px rgba(255, 0, 102, 0.7);
+  text-align: center;
+}
+
+/* Error message */
+.edit-figurine-container .error-message {
+  color: #ff3f6c;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding: 8px;
+  background: rgba(255, 63, 108, 0.1);
+  border-left: 4px solid #ff3f6c;
+  border-radius: 4px;
+}
+
+/* Labels */
+.edit-figurine-container label {
+  display: block;
+  font-weight: 600;
+  color: #ff99cc;
+  margin-top: 15px;
+  margin-bottom: 6px;
+}
+
+/* Inputs and textarea */
+.edit-figurine-container input[type="text"],
+.edit-figurine-container input[type="number"],
+.edit-figurine-container textarea {
+  width: 100%;
+  padding: 10px;
+  background: rgba(40, 40, 60, 0.8);
+  border: 1px solid rgba(255, 0, 102, 0.3);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.edit-figurine-container textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.edit-figurine-container input:focus,
+.edit-figurine-container textarea:focus {
+  border-color: #ff0066;
+  box-shadow: 0 0 8px rgba(255, 0, 102, 0.4);
+}
+
+/* Checkbox styling */
+.edit-figurine-container input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 8px;
+}
+
+/* Submit button */
+.edit-figurine-container button[type="submit"] {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff0066, #ff3399);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.edit-figurine-container button[type="submit"]:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

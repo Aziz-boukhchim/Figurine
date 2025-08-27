@@ -1,0 +1,134 @@
+/* Full-page cyberpunk background */
+.order-page {
+  min-height: 100vh;
+  background-color: #0f0f1b;
+  background-image:
+    linear-gradient(90deg, rgba(255, 0, 150, 0.07) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 0, 150, 0.07) 1px, transparent 1px);
+  background-size: 80px 80px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Main container */
+.order-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 25px;
+  background: rgba(20, 20, 40, 0.9);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 0, 150, 0.4);
+  box-shadow: 0 0 30px rgba(255, 0, 150, 0.2);
+  color: #f1f1f1;
+}
+
+/* Title */
+.order-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #ff00aa;
+  margin-bottom: 20px;
+}
+
+/* Back button */
+.back-btn {
+  background: linear-gradient(45deg, #ff0099, #00ffe0);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+}
+.back-btn:hover {
+  box-shadow: 0 0 10px #00ffe0;
+  transform: scale(1.05);
+}
+
+/* Order info */
+.order-info p {
+  margin: 5px 0;
+}
+
+/* Items */
+.items-title {
+  margin-top: 20px;
+  color: #ff00aa;
+}
+
+.order-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(15, 15, 30, 0.95);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 0, 150, 0.2);
+}
+
+.order-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Status section */
+.status-section {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.status-select {
+  flex: 1;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 0, 150, 0.3);
+  background: rgba(20, 20, 40, 0.9);
+  color: #fff;
+}
+
+.update-btn {
+  padding: 6px 12px;
+  background: linear-gradient(45deg, #ff0099, #00ffe0);
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.update-btn:hover {
+  box-shadow: 0 0 10px #00ffe0;
+  transform: scale(1.05);
+}
+
+/* Loading & Error */
+.order-loading {
+  text-align: center;
+  color: #00ffe0;
+}
+
+.order-error {
+  text-align: center;
+  color: red;
+}
+
+.order-message {
+  margin-top: 10px;
+  color: #00ffe0;
+}
+
+.admin-page .navbar {
+  display: none !important;
+}

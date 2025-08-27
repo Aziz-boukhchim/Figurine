@@ -1,0 +1,8 @@
+# Allow all search engines
+User-agent: *
+Disallow: /admin-portal-7382
+Disallow: /admin/orders
+Disallow: /admin/figurines/edit
+
+# Sitemap location
+Sitemap: https://yourwebsite.com/sitemap.xml

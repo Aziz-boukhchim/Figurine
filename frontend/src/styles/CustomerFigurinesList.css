@@ -1,0 +1,218 @@
+/* Page background */
+body {
+  background-color: #f0f6ff;
+  margin: 0;
+  font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+/* Banner */
+.figurines-banner {
+  position: relative;
+  width: 100%;
+  height: auto;      
+  overflow: hidden;
+  margin-top: 10px;   /* reduced from 70px for less spacing */
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;      
+  object-fit: contain; 
+  display: block;
+  filter: blur(2.5px);   /* slight blur */
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+/* Hero Section */
+.figurines-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.figurines-hero h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.figurines-hero p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Categories Bar */
+.categories-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 1.5rem;
+}
+
+.category-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: #e0e0e0;
+  transition: all 0.25s ease;
+}
+
+.category-btn:hover {
+  background: #c0c0c0;
+}
+
+.category-btn.active {
+  background: #1a1a1a;
+  color: white;
+}
+
+/* Figurines Grid */
+.figurines-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* exactly 4 per row */
+  gap: 2.5rem;
+  padding: 0 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 3rem; /* adds space below the cards/buttons */
+}
+
+/* Figurine Item */
+.figurine-item {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  background: transparent;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.figurine-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.figurine-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.figurine-item:hover .figurine-image {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.figurine-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.2rem 0;
+}
+
+.figurine-price {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.add-cart-btn,
+.details-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 18px;
+  border: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin: 0.15rem;
+}
+
+.add-cart-btn {
+  background: #0056b3;
+  color: #fff;
+}
+
+.add-cart-btn:hover {
+  background: #003f8a;
+}
+
+.details-btn {
+  background: #004080;
+  color: #fff;
+}
+
+.details-btn:hover {
+  background: #002a5c;
+}
+
+/* Responsive Grids */
+@media (max-width: 1100px) {
+  .figurines-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .figurines-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .figurines-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Banner Adjustments */
+@media (max-width: 850px) {
+  .figurines-banner {
+    margin-top: 70px; /* space for fixed navbar */
+    height: 250px;    /* optional: adjust banner height */
+  }
+  .banner-overlay h1 {
+    font-size: 1.5rem;
+  }
+  .banner-overlay p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .figurines-banner {
+    margin-top: 60px; /* space for fixed navbar */
+    height: 200px;    
+  }
+  .banner-overlay h1 {
+    font-size: 1.2rem;
+  }
+  .banner-overlay p {
+    font-size: 0.8rem;
+  }
+}

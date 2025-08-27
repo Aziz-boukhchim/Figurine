@@ -1,0 +1,150 @@
+.mycheckout-shell {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+  padding-top: 60px; /* inside .mycheckout-shell */
+
+}
+
+.mycheckout-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.mycheckout-left {
+  flex: 1 1 400px;
+}
+
+.mycheckout-right {
+  flex: 1 1 350px;
+}
+
+/* Divider line between left and right */
+.mycheckout-divider {
+  width: 1px;
+  background: #ccc;
+}
+
+/* Form styling */
+.mycheckout-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mycheckout-form h3 {
+    text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111; /* nice dark black */
+  border-bottom: 2px solid #111; /* matching black underline */
+  padding-bottom: 6px;
+  border-radius: 4px;
+}
+
+.mycheckout-form label {
+  display: block;
+  margin: 12px 0 4px;
+  font-weight: 500;
+}
+
+.mycheckout-form input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.mycheckout-form button {
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #0070f3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.mycheckout-form button:hover {
+  background: #005bb5;
+}
+
+.mycheckout-message {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #ff4d4f;
+}
+
+/* Order Summary */
+.mycheckout-right h3 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111; /* nice dark black */
+  border-bottom: 2px solid #111; /* matching black underline */
+  padding-bottom: 6px;
+  border-radius: 4px;
+}
+
+.myorder-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.myorder-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.myorder-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.myorder-name {
+  flex: 1;
+}
+
+.myorder-price {
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.myorder-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .mycheckout-wrapper {
+    flex-direction: column;
+  }
+
+  .mycheckout-divider {
+    display: none;
+  }
+}

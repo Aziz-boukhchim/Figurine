@@ -1,0 +1,30 @@
+.admin-page .navbar {
+  display: none !important;
+}
+.admin-sidebar {
+  width: 200px;
+  background: #1e293b;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.admin-sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.admin-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-sidebar nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.admin-sidebar nav a:hover {
+  text-decoration: underline;
+}

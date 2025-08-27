@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rubik+Moonrocks&display=swap');
+
+/* --- Body background with big neon rectangles pattern --- */
+body.add-figurine-page {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #0c001b;
+
+  /* Two layers of large neon lines forming big rectangles */
+  background-image:
+    linear-gradient(90deg, rgba(0, 255, 231, 0.15) 4px, transparent 4px),
+    linear-gradient(rgba(255, 0, 247, 0.15) 4px, transparent 4px);
+  
+  /* Size of the rectangles — 120x120px squares */
+  background-size: 90px 90px;
+  
+  /* Offset the vertical lines by half the size for stagger */
+  background-position: 0 0, 60px 60px;
+  
+  background-repeat: repeat;
+
+  overflow-x: hidden;
+  overflow-y: scroll; /* vertical scroll */
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE & Edge */
+}
+
+body.add-figurine-page::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Zoomed out container */
+.add-figurine-container {
+  position: relative;
+  max-width: 720px;
+  margin: 50px auto;
+  padding: 40px 50px 60px 50px;
+  border-radius: 30px;
+  background:
+    radial-gradient(ellipse at center, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  box-shadow:
+    0 0 40px #0ff,
+    inset 0 0 80px #0ff,
+    0 0 150px #f0f,
+    inset 0 0 150px #f0f;
+  overflow: hidden;
+  font-family: 'Orbitron', 'Rubik Moonrocks', cursive, monospace;
+  color: #00ffe7;
+  text-shadow:
+    0 0 8px #00ffe7,
+    0 0 20px #00ffe7,
+    0 0 40px #00ffe7,
+    0 0 80px #ff00f7;
+  animation: pulseGlow 6s ease-in-out infinite alternate;
+  user-select: none;
+  z-index: 1;
+
+  transform: scale(0.92);
+  transform-origin: top center;
+}
+
+/* Glitchy neon background */
+.add-figurine-container::before,
+.add-figurine-container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(120px);
+  animation: floatyGlow 20s linear infinite alternate;
+  z-index: 0;
+}
+
+.add-figurine-container::before {
+  width: 300px;
+  height: 300px;
+  background: #00ffe7;
+  top: -120px;
+  left: -100px;
+}
+
+.add-figurine-container::after {
+  width: 350px;
+  height: 350px;
+  background: #ff00f7;
+  bottom: -160px;
+  right: -140px;
+}
+
+/* Animated heading with glitch effect */
+.add-figurine-container h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  color: #00ffe7;
+  text-transform: uppercase;
+  animation: flickerNeon 3s linear infinite;
+  filter: drop-shadow(0 0 12px #00ffe7);
+  z-index: 2;
+}
+
+/* Glitch flicker animation */
+@keyframes flickerNeon {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 5px #00ffe7,
+      0 0 10px #00ffe7,
+      0 0 20px #00ffe7,
+      0 0 40px #ff00f7,
+      0 0 80px #ff00f7,
+      0 0 90px #ff00f7;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.3;
+    text-shadow: none;
+  }
+}
+
+/* Form styling */
+.add-figurine-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Labels */
+.add-figurine-container label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00ffe7;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  user-select: none;
+  filter: drop-shadow(0 0 4px #00ffe7);
+}
+
+/* Inputs & textarea */
+.add-figurine-container input[type="text"],
+.add-figurine-container input[type="number"],
+.add-figurine-container textarea,
+.add-figurine-container input[type="file"] {
+  background: #111122;
+  border: 2px solid #00ffe7;
+  border-radius: 18px;
+  padding: 18px 24px;
+  font-size: 1.3rem;
+  color: #00ffe7;
+  font-family: 'Orbitron', monospace;
+  box-shadow:
+    inset 0 0 15px #00ffe7cc;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  outline: none;
+  min-height: 54px;
+  resize: vertical;
+}
+
+.add-figurine-container textarea {
+  min-height: 150px;
+  line-height: 1.7;
+}
+
+/* Focus effect */
+.add-figurine-container input[type="text"]:focus,
+.add-figurine-container input[type="number"]:focus,
+.add-figurine-container textarea:focus,
+.add-figurine-container input[type="file"]:focus {
+  border-color: #ff00f7;
+  box-shadow:
+    0 0 25px #ff00f7,
+    inset 0 0 25px #ff00f7cc;
+  background: #220022;
+}
+
+/* File input */
+.add-figurine-container input[type="file"] {
+  cursor: pointer;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  filter: drop-shadow(0 0 6px #00ffe7);
+}
+
+/* Checkbox */
+.add-figurine-container label.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  color: #00ffe7;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  filter: drop-shadow(0 0 4px #00ffe7);
+}
+
+.add-figurine-container input[type="checkbox"] {
+  accent-color: #ff00f7;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 7px #ff00f7);
+  transition: box-shadow 0.4s ease;
+}
+
+.add-figurine-container input[type="checkbox"]:hover {
+  box-shadow: 0 0 15px #ff00f7cc;
+}
+
+/* Image preview container */
+.add-figurine-container .image-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 14px;
+  justify-content: center;
+}
+
+/* Image previews */
+.add-figurine-container .image-preview-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 22px;
+  object-fit: cover;
+  border: 3px solid #00ffe7;
+  filter: drop-shadow(0 0 15px #00ffe7);
+  transition: transform 0.35s ease, filter 0.35s ease;
+  cursor: zoom-in;
+  user-select: none;
+}
+
+.add-figurine-container .image-preview-container img:hover {
+  transform: scale(1.25) rotate(6deg);
+  border-color: #ff00f7;
+  filter:
+    drop-shadow(0 0 25px #ff00f7),
+    drop-shadow(0 0 40px #00ffe7);
+}
+
+/* Uploading text */
+.add-figurine-container .uploading-text {
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+  color: #ff00f7;
+  letter-spacing: 0.15em;
+  user-select: none;
+  margin-top: 10px;
+  text-shadow: 0 0 12px #ff00f7;
+}
+
+/* Submit button */
+.add-figurine-container button[type="submit"] {
+  background: linear-gradient(90deg, #ff00f7 0%, #00ffe7 100%);
+  border: none;
+  border-radius: 50px;
+  padding: 20px 0;
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #111;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow:
+    0 0 30px #ff00f7,
+    0 0 50px #00ffe7,
+    inset 0 0 20px #ff00f7;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.add-figurine-container button[type="submit"]:hover:not(:disabled) {
+  filter: brightness(1.15);
+  box-shadow:
+    0 0 45px #ff00f7,
+    0 0 70px #00ffe7,
+    inset 0 0 40px #ff00f7;
+}
+
+.add-figurine-container button[type="submit"]:disabled {
+  background: #444;
+  box-shadow: none;
+  color: #222;
+  cursor: not-allowed;
+  filter: none;
+}
+
+/* Animations */
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow:
+      0 0 40px #0ff,
+      inset 0 0 80px #0ff,
+      0 0 150px #f0f,
+      inset 0 0 150px #f0f;
+  }
+  100% {
+    box-shadow:
+      0 0 80px #0ff,
+      inset 0 0 120px #0ff,
+      0 0 180px #f0f,
+      inset 0 0 180px #f0f;
+  }
+}
+
+@keyframes floatyGlow {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translate(20px, -30px) scale(1.1);
+    opacity: 0.22;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.15;
+  }
+}
+.admin-page .navbar {
+  display: none !important;
+}
+

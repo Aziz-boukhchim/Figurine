@@ -1,0 +1,228 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  background-color: #f0f6ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* Logo */
+.navbar-logo-img {
+  height: 50px;
+  width: auto;
+}
+
+/* Search Bar */
+.navbar-search {
+  flex: 1;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-search input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-search input:focus {
+  border-color: #1f3c88;
+  box-shadow: 0 0 8px rgba(31, 60, 136, 0.3);
+}
+
+/* Cart */
+.navbar-cart {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+/* Wrap only icon for badge */
+.cart-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Cart badge */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #d9534f;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Total price */
+.cart-total-price {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #1a1a1a;
+}
+
+/* Cart preview popup */
+.cart-preview {
+  position: absolute;
+  right: 0;
+  top: 130%;
+  width: 320px;
+  max-height: 400px;
+  background-color: #fff;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 1rem;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollable list for many items */
+.cart-items-list {
+  overflow-y: auto;
+  max-height: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Individual cart item */
+.cart-item {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.cart-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Cart preview thumbnail images */
+.cart-item-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Item info container */
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.cart-item-title {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
+.cart-item-qty,
+.cart-item-price {
+  color: #555;
+  font-size: 0.85rem;
+}
+
+/* Footer of the preview */
+.cart-preview-footer {
+  border-top: 1px solid #ddd;
+  padding-top: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Total price text */
+.cart-preview-total {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Remove (X) button */
+.remove-item-btn {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-right: 8px;
+  align-self: center;
+  transition: color 0.2s ease;
+  padding: 0;
+  line-height: 1;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.remove-item-btn:hover {
+  color: #d9534f;
+  background-color: #f8d7da;
+}
+
+/* Go to Cart button */
+.cart-preview-button {
+  background-color: #1f3c88;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cart-preview-button:hover {
+  background-color: #162d66;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-search input {
+    max-width: 300px;
+  }
+
+  .cart-total-price {
+    display: none;
+  }
+}

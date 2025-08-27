@@ -1,0 +1,95 @@
+/* Full-page cyberpunk background (scoped to OrdersList only) */
+.orders-page {
+  min-height: 100vh;
+  background-color: #0f0f1b;
+  background-image:
+    linear-gradient(90deg, rgba(255, 0, 150, 0.07) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 0, 150, 0.07) 1px, transparent 1px);
+  background-size: 80px 80px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.orders-list-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+  background: rgba(20, 20, 40, 0.9);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 0, 150, 0.4);
+  box-shadow: 0 0 30px rgba(255, 0, 150, 0.2);
+  color: #f1f1f1;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Title */
+.orders-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff00aa;
+}
+
+/* Table wrapper */
+.orders-table-wrapper {
+  overflow-x: auto;
+}
+
+/* Table */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(15, 15, 30, 0.95);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.orders-table th {
+  background: rgba(255, 0, 150, 0.15);
+  color: #ff00aa;
+  font-weight: bold;
+}
+
+.orders-table tr:hover {
+  background: rgba(255, 0, 150, 0.05);
+}
+
+/* Buttons */
+.view-btn {
+  padding: 6px 12px;
+  background: linear-gradient(45deg, #ff0099, #00ffe0);
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.view-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffe0;
+}
+
+/* States */
+.orders-loading {
+  text-align: center;
+  color: #00ffe0;
+}
+
+.orders-error {
+  text-align: center;
+  color: red;
+}
+
+.admin-page .navbar {
+  display: none !important;
+}
