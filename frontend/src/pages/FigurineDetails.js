@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback, useContext } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { CartContext } from "../context/CartContext";
-import Footer from "../components/Footer";
 import "../styles/FigurineDetails.css";
 
 const FigurineDetails = () => {
