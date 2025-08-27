@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { faq as faqData } from "../data/faq";
+import faqData from "../data/faq";
 import "../styles/Chatbot.css";
 
 const Chatbot = () => {
