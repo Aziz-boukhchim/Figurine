@@ -22,7 +22,7 @@ const faqData = [
   {
     keyword: "contact",
     question: "How can I contact Mono-Fig?",
-    answer: "You can reach us via our contact form or social media pages."
+    answer: "You can reach us via our social media pages."
   }
 ];
 
