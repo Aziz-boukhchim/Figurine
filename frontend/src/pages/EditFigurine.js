@@ -21,7 +21,7 @@ export default function EditFigurine() {
   useEffect(() => {
     const fetchFigurine = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/figurines/${id}`);
+        const res = await axios.get(`https://figurine.onrender.com/api/figurines/${id}`);
         setFormData({
           title: res.data.title,
           description: res.data.description,
@@ -57,7 +57,7 @@ export default function EditFigurine() {
     try {
       const token = localStorage.getItem("token");
       await axios.patch(
-        `http://localhost:5000/api/figurines/${id}`,
+        `https://figurine.onrender.com/api/figurines/${id}`,
         { ...formData, price: Number(formData.price) },
         { headers: { Authorization: `Bearer ${token}` } }
       );

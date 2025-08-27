@@ -18,7 +18,7 @@ const CustomerFigurinesList = () => {
     const fetchCategories = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/figurines/categories"
+          "https://figurine.onrender.com/api/figurines/categories"
         );
         setCategories(["All", ...res.data]);
       } catch (err) {
@@ -33,8 +33,8 @@ const CustomerFigurinesList = () => {
       try {
         const url =
           category && category !== "All"
-            ? `http://localhost:5000/api/figurines?category=${category}`
-            : "http://localhost:5000/api/figurines";
+            ? `https://figurine.onrender.com/api/figurines?category=${category}`
+            : "https://figurine.onrender.com/api/figurines";
         const res = await axios.get(url);
         setFigurines(res.data);
       } catch (err) {

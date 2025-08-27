@@ -15,7 +15,7 @@ const OrderDetails = () => {
     const fetchOrder = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get(`http://localhost:5000/api/orders/${id}`, {
+        const res = await axios.get(`https://figurine.onrender.com/api/orders/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setOrder(res.data);
@@ -33,7 +33,7 @@ const OrderDetails = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.patch(
-        `http://localhost:5000/api/orders/${id}/status`,
+        `https://figurine.onrender.com/api/orders/${id}/status`,
         { status },
         { headers: { Authorization: `Bearer ${token}` } }
       );

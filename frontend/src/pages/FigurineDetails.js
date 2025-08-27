@@ -20,7 +20,7 @@ const FigurineDetails = () => {
   useEffect(() => {
     const fetchFigurine = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/figurines/${id}`);
+        const res = await axios.get(`https://figurine.onrender.com/api/figurines/${id}`);
         setFigurine(res.data);
         setCurrentIndex(0);
       } catch (err) {

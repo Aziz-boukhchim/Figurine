@@ -10,7 +10,7 @@ export default function FigurinesList() {
 
   const fetchFigurines = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/figurines");
+      const res = await axios.get("https://figurine.onrender.com/api/figurines");
       setFigurines(res.data);
     } catch (error) {
       console.error("Error fetching figurines:", error);
@@ -28,7 +28,7 @@ export default function FigurinesList() {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/figurines/${id}`, {
+      await axios.delete(`https://figurine.onrender.com/api/figurines/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setFigurines(figurines.filter((fig) => fig._id !== id));

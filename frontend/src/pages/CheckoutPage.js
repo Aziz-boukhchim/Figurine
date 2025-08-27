@@ -61,7 +61,7 @@ export default function CheckoutPage() {
 
     try {
       // Send order to backend
-      await axios.post("http://localhost:5000/api/orders", orderPayload);
+      await axios.post("https://figurine.onrender.com/api/orders", orderPayload);
 
       // Clear cart
       clearCart();

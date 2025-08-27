@@ -19,12 +19,12 @@ export default function CartPage() {
     const fetchRecommendations = async () => {
       try {
         if (cartItems.length === 0) {
-          const res = await axios.get("http://localhost:5000/api/figurines?limit=6");
+          const res = await axios.get("https://figurine.onrender.com/api/figurines?limit=6");
           setRecommendations(res.data);
         } else {
           const category = cartItems[0].category;
           const res = await axios.get(
-            `http://localhost:5000/api/figurines?category=${encodeURIComponent(category)}&limit=6`
+            `https://figurine.onrender.com/api/figurines?category=${encodeURIComponent(category)}&limit=6`
           );
           const filtered = res.data.filter(f => !cartItems.some(c => c._id === f._id));
           setRecommendations(filtered);

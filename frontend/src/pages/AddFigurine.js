@@ -82,7 +82,7 @@ export default function AddFigurine() {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:5000/api/figurines",
+        "https://figurine.onrender.com/api/figurines",
         {
           title: formData.title,
           description: formData.description,
