@@ -197,6 +197,15 @@
     overflow-x: hidden; /* ✅ prevent sideways scroll */
   }
 
+  .cart-shell {
+    padding: 60px 8px 0 8px; /* ✅ reduce side padding for small screens */
+  }
+
+  .cart-content {
+    width: 100%; /* ✅ make sure it adapts */
+    overflow-x: hidden;
+  }
+
   .cart-table {
     display: block;
     width: 100%;
