@@ -5,4 +5,4 @@ Disallow: /admin/orders
 Disallow: /admin/figurines/edit
 
 # Sitemap location
-Sitemap: https://yourwebsite.com/sitemap.xml
+Sitemap: https://figurine.netlify.app/sitemap.xml

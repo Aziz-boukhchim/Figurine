@@ -9,17 +9,17 @@ body {
 .figurines-banner {
   position: relative;
   width: 100%;
-  height: auto;      
+  height: auto;
   overflow: hidden;
-  margin-top: 10px;   /* reduced from 70px for less spacing */
+  margin-top: 10px; /* reduced from 70px for less spacing */
 }
 
 .banner-img {
   width: 100%;
-  height: auto;      
-  object-fit: contain; 
+  height: auto;
+  object-fit: contain;
   display: block;
-  filter: blur(2.5px);   /* slight blur */
+  filter: blur(2.5px); /* slight blur */
 }
 
 .banner-overlay {
@@ -29,7 +29,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   padding: 20px 40px;
   border-radius: 10px;
 }
@@ -186,7 +186,30 @@ body {
 
 @media (max-width: 500px) {
   .figurines-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* ✅ 2 per row on small screens */
+    gap: 1.5rem;
+  }
+
+  .figurine-item {
+    max-width: 160px; /* shrink card width */
+  }
+
+  .figurine-image-wrapper {
+    height: 150px; /* smaller image height */
+  }
+
+  .figurine-title {
+    font-size: 0.9rem;
+  }
+
+  .figurine-price {
+    font-size: 0.85rem;
+  }
+
+  .add-cart-btn,
+  .details-btn {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
   }
 }
 
@@ -194,7 +217,7 @@ body {
 @media (max-width: 850px) {
   .figurines-banner {
     margin-top: 70px; /* space for fixed navbar */
-    height: 250px;    /* optional: adjust banner height */
+    height: 250px; /* optional: adjust banner height */
   }
   .banner-overlay h1 {
     font-size: 1.5rem;
@@ -207,7 +230,7 @@ body {
 @media (max-width: 500px) {
   .figurines-banner {
     margin-top: 60px; /* space for fixed navbar */
-    height: 200px;    
+    height: 200px;
   }
   .banner-overlay h1 {
     font-size: 1.2rem;
