@@ -193,9 +193,20 @@
 
 /* Responsive */
 @media (max-width: 800px) {
+  html, body {
+    overflow-x: hidden; /* ✅ prevent sideways scroll */
+  }
+
+  .cart-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto; /* ✅ allow smooth scroll inside table if needed */
+  }
+
   .cart-table th,
   .cart-table td {
     padding: 10px 8px;
+    white-space: nowrap; /* ✅ keep text tidy inside cells */
   }
 
   .cart-product img {
